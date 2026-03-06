@@ -1,0 +1,40 @@
+{
+  "os":  "Windows-10-10.0.19045-SP0",
+  "python":  "CPython 3.11.9",
+  "startedAt":  "2026-03-06T03:56:00.154160Z",
+  "program":  "C:\\Users\\sirta\\deep_learning\\deep_learning_a7\\train.py",
+  "codePath":  "train.py",
+  "codePathLocal":  "train.py",
+  "git":  {
+    "remote":  "https://github.com/tanjha/deep_learning_a7.git",
+    "commit":  "2162163384482237c84aea30fdf39ecfa3899b9f"
+  },
+  "email":  "tanushojha057@gmail.com",
+  "root":  "C:\\Users\\sirta\\deep_learning\\deep_learning_a7",
+  "host":  "DESKTOP-57DVGR7",
+  "executable":  "C:\\Users\\sirta\\AppData\\Local\\Microsoft\\WindowsApps\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\python.exe",
+  "cpu_count":  12,
+  "cpu_count_logical":  24,
+  "gpu":  "NVIDIA GeForce RTX 3060 Ti",
+  "gpu_count":  1,
+  "disk":  {
+    "/":  {
+      "total":  "1998079336448",
+      "used":  "1811916771328"
+    }
+  },
+  "memory":  {
+    "total":  "33514242048"
+  },
+  "gpu_nvidia":  [
+    {
+      "name":  "NVIDIA GeForce RTX 3060 Ti",
+      "memoryTotal":  "8589934592",
+      "cudaCores":  4864,
+      "architecture":  "Ampere",
+      "uuid":  "GPU-2ebfb998-9fe0-3451-0445-1e2dc1658c6d"
+    }
+  ],
+  "cudaVersion":  "13.0",
+  "writerId":  "l0ea53gctvljm6sycohe2kq52e3e1out"
+}

@@ -20,6 +20,7 @@ from tqdm import tqdm
 use_cuda_if_avail = True
 if use_cuda_if_avail and torch.cuda.is_available():
     device = "cuda"
+    #print("Using cuda")
 else:
     device = "cpu"
 
@@ -218,4 +219,5 @@ def generateRunName():
   run_name = ""+random_string+"_Multi30k"
   return run_name
 
-main()
+if __name__ == "__main__":
+  main()

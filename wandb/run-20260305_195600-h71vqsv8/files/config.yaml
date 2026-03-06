@@ -1,0 +1,109 @@
+_wandb:
+    value:
+        cli_version: 0.24.1
+        e:
+            l0ea53gctvljm6sycohe2kq52e3e1out:
+                codePath: train.py
+                codePathLocal: train.py
+                cpu_count: 12
+                cpu_count_logical: 24
+                cudaVersion: "13.0"
+                disk:
+                    /:
+                        total: "1998079336448"
+                        used: "1811916771328"
+                email: tanushojha057@gmail.com
+                executable: C:\Users\sirta\AppData\Local\Microsoft\WindowsApps\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\python.exe
+                git:
+                    commit: 2162163384482237c84aea30fdf39ecfa3899b9f
+                    remote: https://github.com/tanjha/deep_learning_a7.git
+                gpu: NVIDIA GeForce RTX 3060 Ti
+                gpu_count: 1
+                gpu_nvidia:
+                    - architecture: Ampere
+                      cudaCores: 4864
+                      memoryTotal: "8589934592"
+                      name: NVIDIA GeForce RTX 3060 Ti
+                      uuid: GPU-2ebfb998-9fe0-3451-0445-1e2dc1658c6d
+                host: DESKTOP-57DVGR7
+                memory:
+                    total: "33514242048"
+                os: Windows-10-10.0.19045-SP0
+                program: C:\Users\sirta\deep_learning\deep_learning_a7\train.py
+                python: CPython 3.11.9
+                root: C:\Users\sirta\deep_learning\deep_learning_a7
+                startedAt: "2026-03-06T03:56:00.154160Z"
+                writerId: l0ea53gctvljm6sycohe2kq52e3e1out
+        m: []
+        python_version: 3.11.9
+        t:
+            "1":
+                - 1
+                - 33
+                - 49
+                - 51
+                - 105
+            "2":
+                - 1
+                - 33
+                - 49
+                - 51
+                - 105
+            "3":
+                - 13
+                - 16
+                - 61
+            "4": 3.11.9
+            "5": 0.24.1
+            "8":
+                - 3
+            "12": 0.24.1
+            "13": windows-amd64
+arch:
+    value: |-
+        Seq2Seq(
+          (encoder): BidirectionalEncoder(
+            (embedding_layer): Embedding(7852, 128)
+            (drop): Dropout(p=0.5, inplace=False)
+            (gru_1): GRU(128, 256, bidirectional=True)
+          )
+          (enc2dec): Sequential(
+            (0): Linear(in_features=512, out_features=256, bias=True)
+            (1): GELU(approximate='none')
+          )
+          (decoder): Decoder(
+            (attention): DotProductAttention(
+              (hidden_linear): Linear(in_features=256, out_features=64, bias=True)
+              (enc_linear_1): Linear(in_features=512, out_features=64, bias=True)
+              (enc_linear_2): Linear(in_features=512, out_features=256, bias=True)
+            )
+            (drop): Dropout(p=0.5, inplace=False)
+            (embedding_layer): Embedding(5893, 128)
+            (gru): GRU(128, 256)
+            (classifier): Sequential(
+              (0): Linear(in_features=256, out_features=256, bias=True)
+              (1): GELU(approximate='none')
+              (2): Linear(in_features=256, out_features=5893, bias=True)
+            )
+          )
+        )
+attn:
+    value: dotproduct
+bs:
+    value: 128
+dec_dim:
+    value: 256
+dropout:
+    value: 0.5
+embed_dim:
+    value: 128
+enc_dim:
+    value: 256
+kq_dim:
+    value: 64
+l2reg:
+    value: 1e-07
+lr:
+    value: 0.001
+max_epoch:
+    value: 50

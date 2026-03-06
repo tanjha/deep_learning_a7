@@ -1,0 +1,39 @@
+Training Iterations:   0%|          | 0/11300 [00:00<?, ?batch/s]Traceback (most recent call last):
+  File "C:\Users\sirta\deep_learning\deep_learning_a7\train.py", line 222, in <module>
+    main()
+  File "C:\Users\sirta\deep_learning\deep_learning_a7\train.py", line 51, in main
+    train(de_to_ge_model, train_loader, val_loader, vocabs)
+  File "C:\Users\sirta\deep_learning\deep_learning_a7\train.py", line 92, in train
+    out = model(x, y, src_lens)
+          ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\sirta\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\torch\nn\modules\module.py", line 1736, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\sirta\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\torch\nn\modules\module.py", line 1747, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\sirta\deep_learning\deep_learning_a7\models\Seq2SeqTranslator.py", line 160, in forward
+    word_rep, _ = self.encoder(src, src_lens)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\sirta\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\torch\nn\modules\module.py", line 1736, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\sirta\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\torch\nn\modules\module.py", line 1747, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\sirta\deep_learning\deep_learning_a7\models\Seq2SeqTranslator.py", line 69, in forward
+    output, _ = self.gru_1(src)
+                ^^^^^^^^^^^^^^^
+  File "C:\Users\sirta\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\torch\nn\modules\module.py", line 1736, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\sirta\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\torch\nn\modules\module.py", line 1747, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\sirta\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\torch\nn\modules\rnn.py", line 1390, in forward
+    self.check_forward_args(input, hx, batch_sizes)
+  File "C:\Users\sirta\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\torch\nn\modules\rnn.py", line 361, in check_forward_args
+    self.check_input(input, batch_sizes)
+  File "C:\Users\sirta\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\torch\nn\modules\rnn.py", line 312, in check_input
+    raise RuntimeError(
+RuntimeError: input.size(-1) must be equal to input_size. Expected 1, got 128
