@@ -72,7 +72,7 @@ class BidirectionalEncoder(nn.Module):
         fwd = output[:, :, :self.hidden]
         
         b = fwd.shape[0]
-        fwd = fwd[torch.arange(b), src_lens - 1, :]
+        fwd = fwd[torch.arange(b), src_lens, :]
         bwd = bwd[:, 0, :]
         sentence_rep = torch.cat([fwd, bwd], dim=1)
 
