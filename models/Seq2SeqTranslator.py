@@ -159,7 +159,7 @@ class Seq2Seq(nn.Module):
         op, sent_rep = self.encoder(src, src_lens)
         dec_hidden = self.enc2dec(sent_rep)
 
-        for t in range(trg.shape[1]):
+        for t in range(trg.shape[1] - 1):
             dec_hidden, out, _ = self.decoder(input=trg[:, t], hidden=dec_hidden, encoder_outputs=op)
-            outputs[:, t, :] = out
+            outputs[:, t + 1, :] = out
         return outputs
