@@ -97,7 +97,7 @@ class Decoder(nn.Module):
     def forward(self, input, hidden, encoder_outputs):
         input = self.embedding_layer(input)
         input = self.drop(input)
-        input = input.unsqueeze(0)
+        input = input.unsqueeze(1)
 
         _, h = self.gru(input, hidden.unsqueeze(0))
         h = h.squeeze(0)
