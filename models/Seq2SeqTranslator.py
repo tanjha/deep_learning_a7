@@ -60,7 +60,7 @@ class BidirectionalEncoder(nn.Module):
         super().__init__()
         self.embedding_layer = nn.Embedding(embedding_dim=emb_dim, num_embeddings=src_vocab_len)
         self.drop = nn.Dropout(p=dropout)
-        self.gru_1 = nn.GRU(input_size=emb_dim, hidden_size=enc_hid_dim, bidirectional=True)
+        self.gru_1 = nn.GRU(input_size=emb_dim, hidden_size=enc_hid_dim, bidirectional=True, batch_first=True)
         self.hidden = enc_hid_dim
 
     def forward(self, src, src_lens):
@@ -86,7 +86,7 @@ class Decoder(nn.Module):
         self.attention = attention  
         self.drop = nn.Dropout(p=dropout)
         self.embedding_layer = nn.Embedding(embedding_dim=emb_dim, num_embeddings=trg_vocab_len)
-        self.gru = nn.GRU(input_size=emb_dim, hidden_size=dec_hid_dim)
+        self.gru = nn.GRU(input_size=emb_dim, hidden_size=dec_hid_dim, batch_first=True)
         self.classifier = nn.Sequential(
             nn.Linear(in_features=dec_hid_dim, out_features=dec_hid_dim),
             nn.GELU(),
@@ -153,8 +153,6 @@ class Seq2Seq(nn.Module):
         
 
     def forward(self, src, trg, src_lens):
-
-        
         #tensor to store decoder outputs
         outputs = torch.zeros(trg.shape[0], trg.shape[1], self.trg_vocab_size).to(src.device)
 
